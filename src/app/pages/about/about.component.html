@@ -1,1 +1,13 @@
-<p>about works!</p>
+<div class="section">
+    <div class="main">
+        <!--- Summary -->
+        <div class="left-column">
+            <h2>About<i><p>(in about {{summaryCount}} words)</p></i></h2>
+            <p *ngFor="let paragraph of summary">
+                {{ paragraph }}
+            </p>
+        </div>
+        <!--- Skills -->
+        <app-skills class="right-column"></app-skills>
+    </div>
+</div>
