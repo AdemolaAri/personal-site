@@ -11,12 +11,17 @@ import Typewriter from '../../utils/Typewriter';
 })
 export class HeaderComponent implements AfterViewInit {
   @ViewChild('prompt') prompt?: ElementRef;
+  
   navBarItems: string[] = ['about', 'projects', 'contact', 'blog'];
+  private displayTypewritingTexts = true;
 
   ngAfterViewInit() {
     const doc = this.prompt?.nativeElement;
-    const typewriter = this.getTextAnimation(doc, ['Welcome!'], 800, 250);
-    typewriter.start();
+
+    if (this.displayTypewritingTexts) {
+      const typewriter = this.getTextAnimation(doc, ['Welcome!'], 800, 250);
+      typewriter.start();
+    }
   }
 
   private getTextAnimation(
