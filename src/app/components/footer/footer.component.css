@@ -1,0 +1,13 @@
+/* Footer */
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid var(--border);
+    width: 100%;
+    padding: 1.5rem;
+}
+
+.footer p {
+    font-size: 1rem;
+}
