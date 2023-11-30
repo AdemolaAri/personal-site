@@ -1,1 +1,21 @@
-<p>intro works!</p>
+<div class="section section-sm">
+    <h2 class="mb-1 faded">
+        {{intro.greeting}} <span role="img" alt="waving hand emoji">👋</span>
+    </h2>
+    <h1>
+      <span id="shadowBox" class="rainbow_text_animated">{{intro.name}} </span>
+      here <span role="img" alt="cool face emoji">😎</span>
+    </h1>
+    <h1>
+       {{intro.message}}
+    </h1>
+
+    <!-- Social Icons -->
+    <div class="social-icons" *ngIf="networks">
+        <a *ngFor="let social of networks | keyvalue" [href]='social.value'>
+          <button class="icon-button">
+            <img src="assets/svg/logo-{{social.key}}.svg" alt={{social.key}} />
+          </button>
+        </a>
+    </div>
+</div>
