@@ -1,0 +1,9 @@
+<h2>Top Skills</h2>
+<div class="skill">
+    <div *ngFor="let skill of skills; first as isFirst" [ngClass]="isFirst ? '' : 'skill-space'">
+        <h4 class="mb-1">{{skill.name}}</h4>
+        <div class="skill-bar">
+            <div class="skill-progress skill-{{skill.rank}}"></div>
+        </div>
+    </div>
+</div>

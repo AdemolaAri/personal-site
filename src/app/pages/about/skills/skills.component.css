@@ -1,0 +1,43 @@
+.skill {
+    margin: 4rem 0 0 2rem;
+}
+
+.skill-space {
+    margin-top: 2rem;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 6px;
+    background: #27272a;
+    border-radius: 6px;
+}
+
+.skill-progress {
+    height: 100%;
+    border-radius: 6px;
+}
+
+.skill-1 {
+    width: 90%;
+    background: #2563eb;
+    box-shadow: 0 10px 22px rgba(37 99 235 / 58%);
+}
+
+.skill-2 {
+    width: 80%;
+    background: #7c3aed;
+    box-shadow: 0 10px 22px rgba(124 58 237 / 44%);
+}
+
+.skill-3 {
+    width: 70%;
+    background: #f97316;
+    box-shadow: 0 10px 22px rgba(249 115 22 / 23%);
+}
+
+.skill-4 {
+    width: 100%;
+    background: #ca8a04;
+    box-shadow: 0 10px 22px rgba(249 115 22 / 23%);
+}
