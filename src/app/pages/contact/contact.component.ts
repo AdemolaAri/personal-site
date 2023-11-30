@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { dataToCollect } from '../../../assets/user-data/contact';
 
 @Component({
   selector: 'app-contact',
@@ -9,5 +10,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './contact.component.css'
 })
 export class ContactComponent {
-
+  title = 'Contact';
+  userData = dataToCollect;
+  messageInfo = {
+    name: 'message',
+    placeholder: 'Start typing...',
+  };
 }

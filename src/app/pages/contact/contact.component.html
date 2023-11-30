@@ -1,1 +1,24 @@
-<p>contact works!</p>
+<div class="section-sm mg-10">
+    <h2 class="mb-2">{{title}}</h2>
+    <form action="">
+      <div *ngFor="let userinfo of userData" class="mb-2">
+        <label class="mb-1" for="from">{{ userinfo | titlecase }}</label>
+        <input class="input" type="text" id="{{userinfo | lowercase}}" placeholder="{{ userinfo | titlecase }}" />
+      </div>
+      <div class="mb-2">
+        <label class="mb-1" for="message">{{messageInfo.name | titlecase}}</label>
+        <textarea
+          class="input"
+          name="message"
+          wrap="soft"
+          id="message"
+          cols="30"
+          rows="10"
+          placeholder="{{
+            messageInfo.placeholder
+          }}"
+        ></textarea>
+      </div>
+      <button class="button" type="submit">Submit</button>
+    </form>
+</div>
