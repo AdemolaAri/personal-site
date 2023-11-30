@@ -1,0 +1,14 @@
+<nav class="nav full-width">
+    <div class="flex">
+        <img
+            src="assets/svg/command-palette.svg"
+            alt="Command prompt logo"
+        />
+        <h4 class="nav-prompt" #prompt></h4>
+    </div>
+    <ul class="nav-items nav-link">
+        <li *ngFor="let item of navBarItems">
+            <a href="{{'#'+item}}">{{ item | titlecase }}</a>
+        </li>
+    </ul>
+</nav>

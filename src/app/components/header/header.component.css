@@ -1,0 +1,47 @@
+/* Navigation */
+.nav {
+    max-width: var(--break-max);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.nav-items {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    list-style: none;
+}
+
+.nav-items a {
+    text-decoration: none;
+    background-image:
+            linear-gradient(var(--fg-default), var(--fg-default)),
+            linear-gradient(var(--fg-default), var(--fg-default));
+    background-size: 20px 1px, 0 1px, 100% 1px;
+    background-position: calc(100% * -1) 100%, 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: all 0.2s linear;
+}
+
+.nav-items a:hover {
+    background-size: 20px 1px, 100% 1px, 0 1px;
+    background-position: calc(20px * 20px) 100%, 100% 100%, 0 100%;
+}
+
+.nav-prompt {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--fg-default);
+    text-decoration: none;
+    font-size: var(--font-size);
+    font-weight: 700;
+    cursor: pointer;
+}
+
