@@ -1,1 +1,266 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "Mona Sans";
+    src: url("assets/font/Mona-Sans-Regular.woff2") format("woff2");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Mona Sans";
+    src: url("assets/font/Mona-Sans-BoldWide.woff2") format("woff2");
+    font-weight: 700;
+}
+
+:root {
+    --font: "Mona Sans", sans-serif;
+    --font-size: 1.5rem;
+    --bg:
+      linear-gradient(
+        150deg,
+        #14121e 0%,
+        #0d1117 10%,
+        #0d0d0f 20%,
+        #181426 65%,
+        #0d1117 80%,
+        #101013 100%
+      );
+    --bg-default: #0d1117;
+    --bg-subtle: #161b22;
+    --fg-default: #c9d1d9;
+    --fg-subtle: #6e7681;
+    --border: #484f58;
+    --break-max: 1440px;
+    --break-min: 768px;
+}
+
+html {
+    background: var(--bg);
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+/* Containers */
+.container {
+  max-width: var(--break-max);
+  padding: 2rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.section {
+  margin: 5rem 0;
+  width: 100%;
+  padding-top: 3rem;
+  display: inline-block;
+}
+
+.section-sm {
+  max-width: 900px;
+  text-align: center;
+}
+
+.section-xs {
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 1px solid var(--border);
+  width: 100%;
+  padding: 1.5rem;
+}
+
+body {
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    font-family: var(--font);
+}
+
+  p {
+    color: var(--fg-subtle);
+    font-family: var(--font);
+    margin-top: 0;
+    font-size: var(--font-size);
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font);
+    font-weight: 700;
+    color: var(--fg-default);
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 64px;
+  }
+
+  h2 {
+    font-size: 48px;
+  }
+
+  h3 {
+    font-size: 32px;
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+
+  a {
+    color: #58a6ff;
+    text-decoration: none;
+  }
+
+  label {
+    font-size: var(--font-size);
+    color: var(--fg-default);
+    font-weight: 700;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+/* Buttons */
+.button {
+    cursor: pointer;
+    font-family: var(--font);
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    color: var(--fg-default);
+    transition: all 150ms ease-in-out;
+    background: transparent;
+    font-size: var(--font-size);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    font-weight: 700;
+  }
+
+  .button:hover {
+    border-color: var(--fg-default);
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+    padding-top: 2rem;
+  }
+
+  .icon-button {
+    height: 4rem;
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid var(--border);
+    transition: all ease 0.25s;
+  }
+
+  .icon-button:hover {
+    border-color: var(--fg-default);
+  }
+
+  /* Utility */
+  .faded {
+    color: var(--fg-subtle);
+  }
+
+  .flex {
+    display: flex;
+    width: 100%;
+  }
+
+  .full-width {
+    width: 100%;
+  }
+
+  .gap {
+    gap: 4rem;
+  }
+
+  .mb-1 {
+    margin-bottom: 1rem;
+  }
+
+  .mb-2 {
+    margin-bottom: 2rem;
+  }
+
+  .jc-sb {
+    justify-content: space-between;
+  }
+
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    p {
+      font-size: 1.25rem;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+
+    h2 {
+      font-size: 32px;
+    }
+
+    h3 {
+      font-size: 24px;
+    }
+
+    h4 {
+      font-size: 16px;
+    }
+
+    .social-icons {
+      justify-content: left;
+    }
+
+    .logo {
+      height: 2rem;
+      width: 2rem;
+    }
+
+    .flex {
+      flex-direction: column;
+    }
+
+    .skill {
+      width: 100%;
+      max-width: 1000px;
+      margin-bottom: 2rem;
+    }
+
+    .nav-items {
+      gap: 1.5rem;
+    }
+
+    .nav-link {
+      font-size: 1rem;
+    }
+
+    .footer {
+      flex-direction: column;
+      align-items: center;
+    }
+}
