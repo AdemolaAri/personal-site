@@ -1,0 +1,28 @@
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  .project {
+    padding-bottom: 5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .project-image {
+    background: var(--bg-default);
+    box-shadow: 0 12px 24px rgba(0 0 0 / 24%);
+    border-radius: 0.5rem;
+    align-self: center;
+  }
+
+  .project-icon {
+    width: 2rem;
+    margin-bottom: 2rem;
+
+}
+
+.logo {
+  height: 20rem;
+  width: 20rem;
+}
