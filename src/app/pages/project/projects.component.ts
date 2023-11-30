@@ -6,10 +6,10 @@ import { projects } from '../../../assets/user-data/projects/projects.data';
   selector: 'app-projects',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './projects.component.html',
-  styleUrl: './projects.component.css'
+  templateUrl: './project.component.html',
+  styleUrl: './project.component.css'
 })
-export class ProjectsComponent {
+export class ProjectComponent {
   title = 'Project';
   projects = projects;
 }
