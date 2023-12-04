@@ -35,6 +35,7 @@
 .nav-prompt {
     display: flex;
     align-items: center;
+    font-size: 16px;
 }
 
 .nav-link {

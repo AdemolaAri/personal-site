@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { SkillsComponent } from './skills/skills.component';
@@ -12,7 +12,7 @@ const aboutMeLink ='assets/user-data/about/about-me.txt';
   templateUrl: './about.component.html',
   styleUrl: './about.component.css',
 })
-export class AboutComponent {
+export class AboutComponent implements AfterViewInit {
   summary: string[] | undefined;
   summaryCount: number | undefined;
 

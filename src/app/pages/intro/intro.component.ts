@@ -24,10 +24,10 @@ export class IntroComponent {
   };
 
   getSocials() {
-    let socialsData: { [key in string]: SocialDetails } = {}
+    const socialsData: { [key in string]: SocialDetails } = {}
     for (const [key, value] of Object.entries(this.networks)) {
       socialsData[key] = {userInfo: value, logo: socialNetworkLinks[key]}
-    };
+    }
     return socialsData;
-  };
+  }
 }
