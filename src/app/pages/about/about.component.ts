@@ -1,4 +1,4 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { SkillsComponent } from './skills/skills.component';
@@ -12,11 +12,13 @@ const aboutMeLink ='assets/user-data/about/about-me.txt';
   templateUrl: './about.component.html',
   styleUrl: './about.component.css',
 })
-export class AboutComponent implements AfterViewInit {
+export class AboutComponent implements OnInit {
+
   summary: string[] | undefined;
   summaryCount: number | undefined;
-
-  ngAfterViewInit(): void {
+  private showAllSummary = false;
+  private allSummary: string[] | undefined;
+  ngOnInit(): void {
     this.readFile();
   }
 
@@ -26,8 +28,20 @@ export class AboutComponent implements AfterViewInit {
     this.http
         .get(aboutMeLink, { responseType: 'text' })
         .subscribe((fileContent: string) => {
-          this.summary = fileContent.split('\n').filter((paragraph) => paragraph);
+          this.allSummary = fileContent.split('\n').filter((paragraph) => paragraph);
           this.summaryCount = fileContent.split(' ').length;
+          if (!this.showAllSummary) {
+            this.summary = this.allSummary.slice(0, 2)
+          }
         });
+  }
+
+  toggleSummary() {
+    this.showAllSummary = !this.showAllSummary;
+    if (this.showAllSummary) {
+      this.summary = this.allSummary?.slice();
+    } else {
+      this.summary = this.allSummary?.slice(0, 2)
+    }
   }
 }
