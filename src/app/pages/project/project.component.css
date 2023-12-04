@@ -26,3 +26,12 @@
   height: 20rem;
   width: 20rem;
 }
+
+.section-sm {
+  width: 100%;
+  display: table;
+  padding-top: 8rem;
+  margin: auto;
+  max-width: 900px;
+  text-align: left;
+}

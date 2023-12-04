@@ -4,13 +4,7 @@ export interface Introduction {
     message: string
 }
 
-export interface Networking {
-    github?: Link;
-    linkedin?: Link;
-    twitter?: Link;
-    facebook?: Link;
-    instagram?: Link;
-    stackoverflow?: Link;
+export interface SocialDetails {
+    logo: string;
+    userInfo: string;
 }
-
-type Link = string;

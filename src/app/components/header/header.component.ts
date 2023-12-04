@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import Typewriter from '../../utils/Typewriter';
 
@@ -13,13 +13,20 @@ export class HeaderComponent implements AfterViewInit {
   @ViewChild('prompt') prompt?: ElementRef;
   
   navBarItems: string[] = ['about', 'projects', 'contact', 'blog'];
+  welcomeMessages = [
+    'Welcome!', // English
+    'Káàbọ̀!',   // Yoruuba
+    'Nnọọ!',    // Igbo
+    'Barka da Zuwa!', // Hausa
+  ];
+  
   private displayTypewritingTexts = true;
 
   ngAfterViewInit() {
     const doc = this.prompt?.nativeElement;
 
     if (this.displayTypewritingTexts) {
-      const typewriter = this.getTextAnimation(doc, ['Welcome!'], 800, 250);
+      const typewriter = this.getTextAnimation(doc, this.welcomeMessages, 800, 250);
       typewriter.start();
     }
   }
