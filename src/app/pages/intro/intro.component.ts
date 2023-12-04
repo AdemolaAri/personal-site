@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Introduction, SocialDetails } from '../../types/intro.component.types';
 import { socialNetworkLinks } from '../../../assets/user-data/intro/socials';
@@ -10,7 +10,8 @@ import { socialNetworkLinks } from '../../../assets/user-data/intro/socials';
   templateUrl: './intro.component.html',
   styleUrl: './intro.component.css'
 })
-export class IntroComponent {
+export class IntroComponent implements OnInit {
+  readonly socials : { [key in string]: SocialDetails } = {};
   readonly intro: Introduction = {
     greeting: 'Hi there',
     name: 'Ademola',
@@ -23,11 +24,13 @@ export class IntroComponent {
     twitter: 'https://www.twitter.com/ademolabuwo'
   };
 
-  getSocials() {
-    const socialsData: { [key in string]: SocialDetails } = {}
+  ngOnInit(): void {
+    this.updateSocials();
+  }
+
+  private updateSocials() {
     for (const [key, value] of Object.entries(this.networks)) {
-      socialsData[key] = {userInfo: value, logo: socialNetworkLinks[key]}
+      this.socials[key] = {userInfo: value, logo: socialNetworkLinks[key]};
     }
-    return socialsData;
   }
 }

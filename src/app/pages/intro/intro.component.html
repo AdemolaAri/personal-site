@@ -12,7 +12,7 @@
 
     <!-- Social Icons -->
     <div class="social-icons" *ngIf="networks">
-        <a *ngFor="let social of this.getSocials() | keyvalue" [href]="social.value.userInfo">
+        <a *ngFor="let social of this.socials | keyvalue" [href]="social.value.userInfo">
           <button class="icon-button">
             <img [src]="social.value.logo" alt={{social.key}} />
           </button>
