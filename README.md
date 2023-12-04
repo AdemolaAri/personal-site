@@ -37,6 +37,27 @@ This project is my personal website, built using Angular. Feel free to fork this
 
     Open your browser and visit `http://localhost:4200/` to see your personal website.
 
+5. **Linting with ESLint and Angular CLI**:
+   The project uses ESLint for TypeScript linting. Ensure you have ESLint installed by running:
+
+    ```bash
+    npm install eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-angular --save-dev
+    ```
+
+   Also, make sure to integrate ESLint with Angular CLI by running:
+
+    ```bash
+    ng add @angular-eslint/schematics
+    ```
+
+   Now, you can run the following command to lint your code:
+
+    ```bash
+    npm run lint
+    ```
+
+   This will check your TypeScript code for linting issues. Make sure that any file updates pass the `ng lint` prompt before committing changes.
+
 ## Customization
 
 1. **Edit Content**: Update the content in the various components (such as the about me section, portfolio, etc.) to reflect your personal information.
