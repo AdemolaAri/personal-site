@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Introduction, Networking } from '../../types/intro.component.types';
+import { Introduction, SocialDetails } from '../../types/intro.component.types';
+import { socialNetworkLinks } from '../../../assets/user-data/intro/socials';
 
 @Component({
   selector: 'app-intro',
@@ -16,9 +17,17 @@ export class IntroComponent {
     message: 'A full-stack engineer who writes, secures, and ships code.',
   };
 
-  networks = {
+  networks: {[key in string]: string} = {
     github: 'https://www.github.com/AdemolaAri',
     linkedin: 'https://www.linkedin.com/in/ademolabuwo',
     twitter: 'https://www.twitter.com/ademolabuwo'
-  }
+  };
+
+  getSocials() {
+    let socialsData: { [key in string]: SocialDetails } = {}
+    for (const [key, value] of Object.entries(this.networks)) {
+      socialsData[key] = {userInfo: value, logo: socialNetworkLinks[key]}
+    };
+    return socialsData;
+  };
 }
