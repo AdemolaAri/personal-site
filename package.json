@@ -4,12 +4,15 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:ci": "jest --runInBand",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "build": "ng build",
+    "build:prod": "ng build --prod",
+    "deploy": "if [ -f .github/.ghpages-deploy ]; then npx angular-cli-ghpages --dir=dist/your-app; fi"
+  
   },
   "private": true,
   "dependencies": {
