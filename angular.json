@@ -14,7 +14,7 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/personal-site",
-            "baseHref": "/personal-website/",
+            "baseHref": "/personal-site/",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
