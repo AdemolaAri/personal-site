@@ -4,7 +4,7 @@ export const projects: Project[] = [
     {
         title: 'Website',
         summary:
-            'An open-source forum website. Built with HTML, CSS, and Javascript for the front-end, and Node.js for the back-end.',
+            'An open-source profolio website. Built with Angular for the front-end and Node.js for the backend.',
         image: 'placeholder-1.png',
         icon: 'file-code.svg',
     },

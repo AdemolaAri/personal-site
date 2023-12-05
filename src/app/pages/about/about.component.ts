@@ -5,6 +5,11 @@ import { SkillsComponent } from './skills/skills.component';
  
 const aboutMeLink ='assets/user-data/about/about-me.txt';
 
+enum MoreOrLess {
+  MORE = 'More',
+  LESS = 'Less'
+}
+
 @Component({
   selector: 'app-about',
   standalone: true,
@@ -16,6 +21,7 @@ export class AboutComponent implements OnInit {
 
   summary: string[] | undefined;
   summaryCount: number | undefined;
+  moreOrLess: MoreOrLess = MoreOrLess.MORE
   private showAllSummary = false;
   private allSummary: string[] | undefined;
   ngOnInit(): void {
@@ -40,8 +46,10 @@ export class AboutComponent implements OnInit {
     this.showAllSummary = !this.showAllSummary;
     if (this.showAllSummary) {
       this.summary = this.allSummary?.slice();
+      this.moreOrLess = MoreOrLess.LESS
     } else {
       this.summary = this.allSummary?.slice(0, 2)
+      this.moreOrLess = MoreOrLess.MORE
     }
   }
 }

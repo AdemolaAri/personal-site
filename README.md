@@ -14,6 +14,16 @@ This project is my personal website, built using Angular. Feel free to fork this
 
 ## Getting Started
 
+### Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- Node.js
+- npm (Node Package Manager)
+- Angular CLI
+
+### Installation
+
 1. **Fork the Repository**: Click the "Fork" button at the top right corner of this repository to create your own copy.
 
 2. **Clone the Repository**: Clone the forked repository to your local machine using the following command:
@@ -58,6 +68,14 @@ This project is my personal website, built using Angular. Feel free to fork this
 
    This will check your TypeScript code for linting issues. Make sure that any file updates pass the `ng lint` prompt before committing changes.
 
+## Running Tests with Jest
+
+Jest is configured for testing in this project. Run the tests with the following command:
+
+```bash
+npm run test
+```
+
 ## Customization
 
 1. **Edit Content**: Update the content in the various components (such as the about me section, portfolio, etc.) to reflect your personal information.
@@ -66,9 +84,27 @@ This project is my personal website, built using Angular. Feel free to fork this
 
 3. **Add Projects**: Expand the portfolio section by adding your own projects. Update the `projects` array in the `portfolio.component.ts` file.
 
-## Deployment
+## GitHub Actions Workflows
 
-Once you're satisfied with your changes, you can deploy your website using the platform of your choice.
+This project uses GitHub Actions for continuous integration and deployment. There are two workflows:
+
+- Build and Deploy Workflow (build-and-deploy.yml):
+
+    - Triggers on every push to the main branch.
+    - Runs the production build and deploys to GitHub Pages _(if needed)_
+    - Checks for the .ghpages-deploy file inside the `.github` folder to determine deployment to Github Pages.
+
+## Workflow Configuration
+
+The workflow configurations can be found in the .github/workflows directory.
+
+## Contributing
+
+1. Fork the repository.
+2. Create a new branch: git checkout -b feature/my-feature.
+3. Commit your changes: git commit -am 'Add new feature'.
+4. Push to the branch: git push origin feature/my-feature.
+5. Submit a pull request.
 
 ## License
 

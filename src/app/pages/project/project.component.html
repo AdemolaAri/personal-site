@@ -1,22 +1,22 @@
 <div  class="section-sm">
-    <h2 class="mb-2">{{ title }}</h2>
-    <div class="projects">
-      <div *ngFor="let project of projects; last as last"
-            [ngClass]="{flex: true, gap: true, project: !last}">
-        <img
-          src="assets/img/{{project.image}}"
-          alt="{{project.title}} logo"
-          class="project-image full-width logo"
-        />
-        <div class="project-description full-width">
-          <img src="assets/svg/{{project.icon}}" alt="" class="project-icon"/>
-          <div class="flex-column gap-12">
-            <h3 class="mb-1">{{project.title}}</h3>
-            <p> {{project.summary}} </p>
-          </div>
-          <a href="#"><button class="button">Learn more</button></a>
+  <h2 class="mb-2">{{ title }}</h2>
+  <div class="projects">
+    <div *ngFor="let project of projects; last as last"
+          [ngClass]="{flex: true, gap: true, project: !last}">
+      <img
+        src="assets/img/{{project.image}}"
+        alt="{{project.title}} logo"
+        class="project-image full-width logo"
+      />
+      <div class="project-description full-width">
+        <img src="assets/svg/{{project.icon}}" alt="" class="project-icon"/>
+        <div class="flex-column gap-12">
+          <h3 class="mb-1">{{project.title}}</h3>
+          <p> {{project.summary}} </p>
         </div>
+        <a href="#"><button class="button">Learn more</button></a>
       </div>
-      </div>
+    </div>
   </div>
+</div>
   
