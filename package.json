@@ -11,7 +11,7 @@
     "lint": "ng lint",
     "build": "ng build",
     "build:prod": "ng build --configuration=production",
-    "deploy": "if [ -f .github/.ghpages-deploy ]; then npx angular-cli-ghpages --dir=dist/personal-site; fi"
+    "deploy": "if [ -f .github/.ghpages-deploy ]; then npx angular-cli-ghpages --dir=personal-site; fi"
   },
   "private": true,
   "dependencies": {
