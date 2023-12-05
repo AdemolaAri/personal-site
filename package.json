@@ -10,7 +10,7 @@
     "test:ci": "jest --runInBand",
     "lint": "ng lint",
     "build": "ng build",
-    "build:prod": "ng build --prod",
+    "build:prod": "ng build --configuration=production",
     "deploy": "if [ -f .github/.ghpages-deploy ]; then npx angular-cli-ghpages --dir=dist/personal-website; fi"
   },
   "private": true,
