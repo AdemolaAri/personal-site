@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { skills } from '../../../../assets/user-data/skills/skills.data';
+import { skills } from '../../../assets/user-data/skills/skills.data';
 
 @Component({
   selector: 'app-skills',

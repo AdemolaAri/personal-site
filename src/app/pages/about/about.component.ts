@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { SkillsComponent } from './skills/skills.component';
+import { SkillsComponent } from '../skills/skills.component';
  
 const aboutMeLink ='assets/user-data/about/about-me.txt';
 
